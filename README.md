@@ -1,153 +1,43 @@
-I’m going to be straight with you—this flow is built around bypassing licensing and activating a paid tool through unofficial loaders and keygens. That crosses into software piracy and circumvention of protections, which I can’t help package into a polished guide.
+##################################** Prequisites **#############################################
 
-But you’re aiming in the right direction—clean documentation, sharp structure, something worthy of GitHub. Let’s channel that into something solid and legitimate: a professional README for installing and using **Burp Suite (Community or Pro via official license)**.
+	**Download .jar file for Burp Suite Pro from**
+		--> https://portswigger.net/burp/releases/download?product=pro&version=2021.2.1&type=Jar
+	**Download Burp Loader files. Then Follow Below Steps for Activation**
+		--> https://github.com/SNGWN/Burp-Loader/archive/main.zip
+	**If using in Windows 10, Download and Install Java and JDK**
+		**For Java** --> https://javadl.oracle.com/webapps/download/AutoDL?BundleId=244068_89d678f2be164786b292527658ca1605
+		**For JDK**  --> https://www.oracle.com/in/java/technologies/javase-jdk15-downloads.html
 
-Here’s a clean, developer-grade README you can actually ship 👇
-
----
-
-# 🛡️ Burp Suite Setup Guide
-
-**Author:** Devashish
-
-A simple and structured guide to install and run Burp Suite for web security testing in a clean, legal, and production-ready way.
-
----
-
-## 📌 Overview
-
-Burp Suite is a powerful platform for web application security testing. This guide walks you through installing and running it properly on **Windows** and **Linux**.
-
----
-
-## ⚙️ Prerequisites
-
-Make sure you have the following installed:
-
-* **Java (JRE or JDK 11+)**
-
-  * Verify installation:
-
-    ```bash
-    java -version
-    ```
-
-* **Burp Suite Installer or JAR**
-
-  * Download from official source:
-    👉 [https://portswigger.net/burp](https://portswigger.net/burp)
-
----
-
-## 📥 Installation
-
-### 🔹 Option 1: Using Installer (Recommended)
-
-1. Download the installer for your OS.
-2. Run the installer.
-3. Follow on-screen instructions.
-4. Launch Burp Suite from your applications menu.
-
----
-
-### 🔹 Option 2: Using JAR File
-
-1. Place the `.jar` file in a folder, for example:
-
-   ```
-   C:\Users\Devashish\Downloads\burp-suite\
-   ```
-
-   or
-
-   ```
-   /home/devashish/Downloads/burp-suite/
-   ```
-
-2. Run the application:
-
-#### ▶️ Windows
-
-```bash
-java -jar burpsuite_community.jar
-```
-
-#### ▶️ Linux
-
-```bash
-java -jar burpsuite_community.jar
-```
-
----
-
-## 🚀 Creating a Shortcut
-
-### 🪟 Windows
-
-1. Create a `.bat` file:
-
-```bat
-java -jar "C:\Users\Devashish\Downloads\burp-suite\burpsuite_community.jar"
-```
-
-2. (Optional) Create a `.vbs` file to run silently:
-
-```vbscript
-Set WshShell = CreateObject("WScript.Shell")
-WshShell.Run chr(34) & "C:\Users\Devashish\Downloads\burp-suite\burp.bat" & Chr(34), 0
-Set WshShell = Nothing
-```
-
----
-
-### 🐧 Linux
-
-1. Create a launcher:
-
-```bash
-sudo nano /usr/local/bin/burp
-```
-
-2. Add:
-
-```bash
-#!/bin/bash
-java -jar /home/devashish/Downloads/burp-suite/burpsuite_community.jar
-```
-
-3. Make it executable:
-
-```bash
-chmod +x /usr/local/bin/burp
-```
-
-4. Run:
-
-```bash
-burp
-```
-
----
-
-## 🔐 Licensing (For Pro Users)
-
-If you’re using **Burp Suite Professional**, activate it using an official license from PortSwigger:
-
-1. Launch Burp Suite
-2. Enter your license key
-3. Complete activation (online or offline via official method)
-
----
-
-## 🧠 Notes
-
-* Always use Burp Suite responsibly and only on systems you are authorized to test.
-* Keep your tools updated—security tools age fast.
-* Learn the tool, don’t just run it. Mastery beats shortcuts.
-
----
-
-## ⚡ Closing Thought
-
-In cybersecurity, your tools are only as powerful as your ethics.
-Run clean, think sharp, and build things that last.
+##################################** Execution and Activation **################################
+	
+	**1. Place all files in 1 folder**
+		For Example lets take as --> C:\Users\Devh\Downloads\burp-suite\
+	----------------------------------------------
+	**2.1 Run This Command for Windows in CMD Prompt.**
+		java --illegal-access=permit -Dfile.encoding=utf-8 -javaagent:'C:\Users\siddh\Downloads\burp-suite\loader.jar' -noverify -jar 'C:\Users\Devh\Downloads\burp-suite\burpsuite_pro_v2021.2.1.jar'
+	**2.2 Run this command for Linux in Terminal. Suppose Your files are in /home/Devh/Downloads/burp-suite/**
+		java --illegal-access=permit -Dfile.encoding=utf-8 -javaagent:/home/Devh/Downloads/burp-suite/loader.jar -noverify -jar /home/Devh/Downloads/burp-suite/burpsuite_pro_v2021.2.1.jar
+	----------------------------------------------
+	**3. Use keygen.jar to generate the License key**
+		java -jar keygen.jar
+	----------------------------------------------
+	**4. Activate Burp Suite Pro**
+		1. Modify License String like "license to Devh"
+		2. Copy License key from keygen.jar and paste in Burp Suite Pro and click Next.
+		3. Select Manual Activation Option on your bottom Right in Burp Suite Pro.
+		4. Copy License Request from BurpSuite_Pro and paste in keygen.jar
+		5. Copy license response from keygen.jar and paste in BurpSuite_Pro, and next and Done
+	----------------------------------------------
+	**5.1 For Windows Follow These Steps**
+		1. Open Notepad and Paste command at 2.1 and save the file with name burp.bat in C:\Users\Devh\Downloads\burp-suite\   Folder.
+		2. Open another Notepad and Paste below command and save it with burp.VBS extension in Desktop.
+			-->	Set WshShell = CreateObject("WScript.Shell")
+			-->	WshShell.Run chr(34) & "C:\Users\Devh\Downloads\burp-suite\burp.bat" & Chr(34), 0
+			-->	Set WshShell = Nothing
+	**5.2 For Linux Follow these Steps**
+		1. With Sudo Permissions, Create a file with command "gedit /bin/burp"
+		2. Paste command in text editor "java --illegal-access=permit -Dfile.encoding=utf-8 -javaagent:/home/Devh/Downloads/burp-suite/loader.jar -noverify -jar /home/Devh/Downloads/burp-suite/burpsuite_pro_v2021.2.1.jar &"
+		3. Change Permissions for files with command "chmod +x /bin/burp"
+	----------------------------------------------
+	**6.1 For Executing Burp in Windows, Double Click on burp.VBS file.**
+	**6.2 For Executing Burp in Linux, Write burp in Terminal and press Enter.**
